@@ -1,6 +1,10 @@
-/* Set the font family for the entire body */
-body {
-  font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
 }
 * {
   margin: 0;
@@ -93,8 +97,15 @@ nav .sub-menu a:hover {
     color: #987554;
     background-color: white;
 }
+body{
+  background-color: #e5d3b3;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
 /* Styling for the form container */
 .form-container {
+  background-color: #d2b48c;
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
@@ -106,6 +117,7 @@ nav .sub-menu a:hover {
 .form-container h1 {
   text-align: center;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 /* Styling for each form group */
@@ -144,7 +156,7 @@ nav .sub-menu a:hover {
 
 /* Styling for the submit button */
 .form-group input[type="submit"] {
-  background-color: #4caf50;
+  background-color: #664229;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -155,7 +167,7 @@ nav .sub-menu a:hover {
 /* Styling for small helper text */
 .form-group small {
   font-size: 12px;
-  color: #888;
+  color: #654B38;
 }
 
 /* New styles for error messages */
@@ -167,7 +179,7 @@ nav .sub-menu a:hover {
 
 /* Styling for error messages */
 .error {
-  color: red;
+  color: #664229;
   display: block;
   margin-top: 5px;
 }
