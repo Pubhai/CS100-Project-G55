@@ -1,0 +1,200 @@
+/* Set the font family for the entire body */
+body {
+  font-family: Arial, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
+}
+header {
+    position: relative;
+    /* border: 1px solid red; */
+    height: 200px;
+    background-color: #664229;
+    background-size: 100%;
+    background-position: center;
+}
+
+header>img {
+    width: 100%;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.60);
+}
+nav {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 20%;
+}
+
+nav .logo img {
+    width: 20%;
+}
+
+nav .sub-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    border-bottom: 1px solid transparent;
+}
+
+nav .sub-menu a:hover {
+    border-bottom: 1px solid white;
+    transition: .5s;
+}
+
+.menu-text {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.menu-text h1 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.menu-text p {
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+    background-color: white;
+    padding: 5px 20px;
+}
+
+.menu-text span {
+    font-size: 40px;
+    font-weight: 900;
+    color: #987554;
+    background-color: white;
+}
+/* Styling for the form container */
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Center-align the heading and add margin at the bottom */
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling for each form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Styling for form group labels */
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+/* Styling for various form input types */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea,
+.form-group input[type="datetime-local"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Allow vertical resizing for textareas */
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Styling for select dropdowns */
+.form-group select {
+  width: 100%;
+}
+
+/* Styling for the submit button */
+.form-group input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Styling for small helper text */
+.form-group small {
+  font-size: 12px;
+  color: #888;
+}
+
+/* New styles for error messages */
+
+/* Position the error message relatively within the form group */
+.form-group {
+  position: relative;
+}
+
+/* Styling for error messages */
+.error {
+  color: red;
+  display: block;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-text h1 {
+      font-size: 20px;
+  }
+  .menu-text p {
+      font-size: 15px;
+      padding: 5px 20px;
+  }
+  .menu-text span {
+      font-size: 15 px;
+  }
+}
+
+/* tablet resolution */
+@media screen and (max-width: 992px) {
+  .menu-text h1 {
+      font-size: 30px;
+  }
+  .menu-tex-t p {
+      font-size: 15px;
+      padding: 1px 20px;
+  }
+  .menu-text span {
+      font-size: 15 px;
+  }
+}
