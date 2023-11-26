@@ -96,59 +96,38 @@ body{
     padding: 0;
     display: grid;
 }
-.introduce{
+.introduce1st{
     background-color: #d2b48c;
     text-align: center;
     margin: 50px;
     margin-bottom: 10px;
     margin-left: 50px;
 }
-.introduce span{
+.introduce1st span{
     font-weight: bold;
 }
-.greeting {
+.greeting1 {
     font-size: 40px;
     font-weight: bold;
 }
-.name{
+.name1{
     font-size: 20px;
 }
-.nicknameandface{
+.nicknameandface1{
     font-size: 20px;
 }
-.face{
+.face1{
     font-size: 20px;
 }
-.talents{
-    background-color: bisque;
-    font-size: 30px;
-    padding: 20px;
-    margin: 20px;
-}
-.tmi span{
-    font-weight: bold;
-}
-.talentsdetails{
-    background-color: cornsilk;
-    font-size: 20px;
-    margin: 50px;
-}
-.talentsdetails li{
-    font-weight: 400;
-}
-.hobbies{
-    background-color: #987554;
-    font-size: 30px;
-    padding: 20px;
-    margin: 20px;
-}
-.hobbiesdetails{
+.introduce2nd{
     background-color: #b99976;
-    font-size: 20px;
+    text-align: center;
     margin: 50px;
+    margin-bottom: 10px;
+    margin-left: 50px;
 }
-.hobbiesdetails li{
-    font-weight: 400;
+.introduce2nd span{
+    font-weight: bold;
 }
 .footer {
     background-color: #664229;
