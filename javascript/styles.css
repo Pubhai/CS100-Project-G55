@@ -45,17 +45,6 @@ nav {
     align-items: center;
 }
 
-nav .logo {
-    display: flex;
-    align-items: center;
-    color: white;
-    width: 20%;
-}
-
-nav .logo img {
-    width: 20%;
-}
-
 nav .sub-menu a {
     color: white;
     text-decoration: none;
