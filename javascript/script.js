@@ -1,14 +1,10 @@
-/*
-  File: script.js
-  Author: CS100 Team
-  Date Created: 23 July 2023
-  Copyright: CSTU
-  Description: JS code of CSTU Passport that validate with JS
-*/
+// File: script.js
+// Author: CS100 Team
+// Date Created: 23 July 2023
+// Copyright: CSTU
+// Description: JS code of CSTU Passport that validates with JS
 
 const config = {
-  // backendUrl: "http://54.179.42.49/", // Default backend URL
-  // backendUrl: "https://d1npkyc4r380kx.cloudfront.net/", // Default backend URL
   backendUrl: "https://d1a6370uhsfk5w.cloudfront.net/", // Default backend URL
 };
 
@@ -63,6 +59,7 @@ function validateFormOnInput() {
   validateName();
   validateStudentID();
   validateEmail();
+  // Add additional validation functions for other form fields if needed
 }
 
 // Function to fetch activity types from the backend
@@ -99,27 +96,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const activityTypes = await fetchActivityTypes();
   populateActivityTypes(activityTypes);
 });
-
-// Additional script for form handling and onchange events
-
-// Function to handle form submission
-function handleSubmit(event) {
-  event.preventDefault();
-  submitForm(event);
-}
-
-// Add event listener for form submission
-document.getElementById("myForm").addEventListener("submit", handleSubmit);
-
-// Function to handle form input changes
-function handleInputChange() {
-  validateFormOnInput();
-  }
-
-// Add onchange event listeners for form inputs
-document.getElementById("fullname").addEventListener("input", handleInputChange);
-document.getElementById("studentID").addEventListener("input", handleInputChange);
-document.getElementById("email").addEventListener("input", handleInputChange);
 
 // Function to submit the form
 async function submitForm(event) {
@@ -159,7 +135,7 @@ async function submitForm(event) {
 
   console.log(data);
 
-try {
+  try {
     // Send data to the backend using POST request
     const response = await fetch(config.backendUrl + "record", {
       method: "POST",
@@ -202,7 +178,5 @@ document.getElementById("myForm").addEventListener("submit", submitForm);
 
 // Event listeners for input validation on user input
 document.getElementById("fullname").addEventListener("input", validateName);
-document
-  .getElementById("studentID")
-  .addEventListener("input", validateStudentID);
+document.getElementById("studentID").addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
