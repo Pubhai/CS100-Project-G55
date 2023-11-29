@@ -100,7 +100,27 @@ document.addEventListener("DOMContentLoaded", async () => {
   populateActivityTypes(activityTypes);
 });
 
-// Function to submit the form
+// Additional script for form handling and onchange events
+
+// Function to handle form submission
+function handleSubmit(event) {
+  event.preventDefault();
+  submitForm(event);
+}
+
+// Add event listener for form submission
+document.getElementById("myForm").addEventListener("submit", handleSubmit);
+
+// Function to handle form input changes
+function handleInputChange() {
+  validateFormOnInput();
+  }
+
+// Add onchange event listeners for form inputs
+document.getElementById("fullname").addEventListener("input", handleInputChange);
+document.getElementById("studentID").addEventListener("input", handleInputChange);
+document.getElementById("email").addEventListener("input", handleInputChange);
+
 // Function to submit the form
 async function submitForm(event) {
   event.preventDefault();
@@ -134,12 +154,12 @@ async function submitForm(event) {
     start_date: formData.get("startDate"),
     end_date: formData.get("endDate"),
     location: formData.get("location"),
-    description: formData.get("description")
+    description: formData.get("description"),
   };
 
   console.log(data);
 
-  try {
+try {
     // Send data to the backend using POST request
     const response = await fetch(config.backendUrl + "record", {
       method: "POST",
@@ -161,7 +181,11 @@ async function submitForm(event) {
       // Display success message with formatted data
       alert(responseData.message + "\n" + formattedData);
 
+      // Reset the form
       document.getElementById("myForm").reset();
+
+      // Display the result underneath the form
+      document.getElementById('resultContainer').innerHTML = `<h2>Form Submission Result:</h2><pre>${formattedData}</pre>`;
     } else {
       console.error("Failed to submit form data.");
 
