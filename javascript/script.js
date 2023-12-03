@@ -150,22 +150,42 @@ async function submitForm(event) {
       const responseData = await response.json();
       console.log("Form data submitted successfully!");
 
-      // Format JSON data for display
-      const formattedData = Object.entries(responseData.data)
-        .map(([key, value]) => `"${key}": "${value}"`)
-        .join("\n");
+      // Customize the displayed user data
+      const userName = `${data.first_name} ${data.last_name}`;
+      const userStudentID = data.student_id;
+      const userEmail = data.email;
 
-      // Display success message with formatted data
-      alert(responseData.message + "\n" + formattedData);
+      // Work/Activity details
+      const workTitle = data.title;
+      const typeOfWork = data.type_of_work_id; // Assuming this is an ID, you might want to map it to a human-readable type
+      const academicYear = data.academic_year + 543; // Convert back to the actual academic year
+      const semester = data.semester;
+      const startDateTime = data.start_date;
+      const endDateTime = data.end_date;
+      const location = data.location;
+      const description = data.description;
+
+      // Display success message with formatted user data
+      alert(`Thank you, ${userName}! Your form has been successfully submitted.`);
 
       // Reset the form
       document.getElementById("myForm").reset();
 
-      // Display the result underneath the form in a styled container
+      // Display the user data underneath the form in a styled container
       document.getElementById('resultContainer').innerHTML = `
         <div class="result-container">
-          <h2>Form Submission Result:</h2>
-          <pre>${formattedData}</pre>
+          <h2>Submitted User Data:</h2>
+          <p><strong>Name:</strong> ${userName}</p>
+          <p><strong>Student ID:</strong> ${userStudentID}</p>
+          <p><strong>Email:</strong> ${userEmail}</p>
+          <p><strong>Work/Activity Title:</strong> ${workTitle}</p>
+          <p><strong>Type of Work/Activity:</strong> ${typeOfWork}</p>
+          <p><strong>Academic Year:</strong> ${academicYear}</p>
+          <p><strong>Semester:</strong> ${semester}</p>
+          <p><strong>Start Date/Time:</strong> ${startDateTime}</p>
+          <p><strong>End Date/Time:</strong> ${endDateTime}</p>
+          <p><strong>Location:</strong> ${location}</p>
+          <p><strong>Description:</strong> ${description}</p>
         </div>
       `;
     } else {
