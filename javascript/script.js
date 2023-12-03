@@ -165,7 +165,7 @@ async function submitForm(event) {
         <div class="result-container">
         <h2>Form Submission Result:</h2>
         <pre>${formattedData}</pre>
-      </div>
+      </div>;
     } else {
       console.error("Failed to submit form data.");
 
