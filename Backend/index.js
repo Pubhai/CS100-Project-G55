@@ -25,6 +25,11 @@ app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
 
+// Root endpoint to serve a welcome page
+app.get('/', (req, res) => {
+  res.send('<h1 style="text-align: center;">Welcome to CSTU Passport backend!</h1>');
+});
+
 // POST endpoint to add a new record to the database
 // It validates the provided data and writes it to 'records.json' file
 app.post('/record', (req, res) => {
