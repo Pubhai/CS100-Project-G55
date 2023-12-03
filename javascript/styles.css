@@ -185,23 +185,24 @@ body{
 }
 
 .result-container {
+  border: 2px solid #8B4513;
+  padding: 15px;
   margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: #D2B48C;
+  border-radius: 8px;
 }
 
 .result-container h2 {
-  font-size: 1.5em;
-  color: #333;
+  color: #8B4513;
 }
 
-.result-container pre {
-  white-space: pre-wrap;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
-  color: #666;
+.result-container p {
+  margin-bottom: 10px;
+  color: #4d2600;
+}
+
+.result-container strong {
+  color: #2E2E2E;
 }
 
 
