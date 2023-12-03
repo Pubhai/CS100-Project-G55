@@ -92,6 +92,45 @@ function populateActivityTypes(activityTypes) {
   }
 }
 
+// Function to handle type of work/activity change
+function handleTypeOfWorkChange() {
+  const activityTypeSelect = document.getElementById("activityType");
+
+  // Validate that the user selects a type of work/activity
+  if (activityTypeSelect.value === "") {
+    alert("Please select a type of work/activity.");
+    // You may want to reset the selection or display an error message
+  }
+}
+
+// Function to handle start date change
+function handleStartDateChange() {
+  const startDateInput = document.getElementById("startDate");
+  const endDateInput = document.getElementById("endDate");
+  const startDate = new Date(startDateInput.value);
+  const endDate = new Date(endDateInput.value);
+
+  // Validate that end date is after start date
+  if (endDate <= startDate) {
+    alert("End datetime should be after the start datetime.");
+    // You may want to reset the end date or display an error message
+  }
+}
+
+// Function to handle end date change
+function handleEndDateChange() {
+  const startDateInput = document.getElementById("startDate");
+  const endDateInput = document.getElementById("endDate");
+  const startDate = new Date(startDateInput.value);
+  const endDate = new Date(endDateInput.value);
+
+  // Validate that end date is after start date
+  if (endDate <= startDate) {
+    alert("End datetime should be after the start datetime.");
+    // You may want to reset the end date or display an error message
+  }
+}
+
 // Event listener when the page content has finished loading
 document.addEventListener("DOMContentLoaded", async () => {
   const activityTypes = await fetchActivityTypes();
@@ -208,3 +247,8 @@ document
   .getElementById("studentID")
   .addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
+
+// Add event listeners for the new events
+document.getElementById("startDate").addEventListener("change", handleStartDateChange);
+document.getElementById("endDate").addEventListener("change", handleEndDateChange);
+document.getElementById("activityType").addEventListener("change", handleTypeOfWorkChange);
