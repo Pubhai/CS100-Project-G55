@@ -161,8 +161,11 @@ async function submitForm(event) {
       // Reset the form
       document.getElementById("myForm").reset();
 
-      // Display the result underneath the form
-      document.getElementById('resultContainer').innerHTML = `<h2>Form Submission Result:</h2><pre>${formattedData}</pre>`;
+      // Display the result underneath the form in a styled containerdocument.getElementById('resultContainer').innerHTML = `
+        <div class="result-container">
+        <h2>Form Submission Result:</h2>
+        <pre>${formattedData}</pre>
+      </div>;
     } else {
       console.error("Failed to submit form data.");
 

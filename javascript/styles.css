@@ -184,6 +184,27 @@ body{
   margin-top: 5px;
 }
 
+.result-container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.result-container h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.result-container pre {
+  white-space: pre-wrap;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: #666;
+}
+
+
 @media screen and (max-width: 768px) {
   .menu-text h1 {
       font-size: 20px;
